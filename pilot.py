@@ -126,7 +126,7 @@ if modo == "Buscar por Ángulo":
             st.warning("No se encontraron coincidencias.")
         else:
             st.success(f"Se encontraron {len(resultados)} coincidencia(s).")
-            st.dataframe(resultados)
+            st.table(resultado)
 
 else:
     st.subheader("Búsqueda por nombre de mineral")
@@ -140,8 +140,8 @@ else:
             st.warning("No se encontró ese mineral.")
         else:
             st.success("Mineral encontrado")
-            st.dataframe(resultado)
+            st.table(resultados)
 
 st.divider()
 with st.expander("Ver base de datos completa"):
-    st.dataframe(minerales_arcilla)
+    st.table(minerales_arcilla)
